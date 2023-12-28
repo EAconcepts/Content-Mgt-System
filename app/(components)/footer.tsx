@@ -8,16 +8,10 @@ import pumpkin from './assets/pumpkin.png'
 import customMouse from './assets/customMouse.png'
 import Image from "next/image";
 import Link from "next/link";
+import Tags from "./tags";
+import { TagsProps } from "@/@types";
+import { RecentPostsProps } from "@/@types";
 
-interface RecentPostsProps {
-  title: string;
-  image: string;
-  date: string;
-}
-interface TagsProps {
-    tagName: string,
-    color: string
-}
 const Footer = () => {
   const [recentPosts, setRecentPosts] = useState<RecentPostsProps[]>([
     {
@@ -47,7 +41,7 @@ const Footer = () => {
     },
     {
         tagName: 'Lifestyle',
-        color: '#670101'
+        color: "#670101"
     },
     {
         tagName: 'Health',
@@ -114,10 +108,7 @@ const Footer = () => {
             <h3 className="font-[700] text-[32px] leading-[40.83px] ">Tags</h3>
             <div className="max-w-[409px] flex flex-wrap gap-[32px]">
                 {allTags?.map((tag, index)=>(
-                    <button key={index} className="flex gap-x-[10px] items-center justify-center rounded-[24px] border-[1px] border-black bg-white text-center py-[16px] px-[32px]">
-                        <div className={`w-[16px] h-[16px] rounded-full bg-[${tag.color}]` }></div>
-                        <p>{tag.tagName}</p>
-                    </button>
+                   <Tags key={index} tagName={tag.tagName} color={tag.color}/>
                 ))}
             </div>
         </div>
