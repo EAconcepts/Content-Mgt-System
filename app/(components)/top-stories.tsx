@@ -68,7 +68,7 @@ const TopStories = () => {
   ]);
 
   return (
-    <div className="w-full bg-white pt-[150.5px] ">
+    <div className="w-full bg-white pt-[150.5px] mb-[96px] ">
       <div className=" flex flex-col items-center px-[73px]">
         <h4 className="text-black text-[32px] font-[700] leading-[30px]">
           Top Stories
@@ -175,11 +175,11 @@ const TopStories = () => {
         </Carousel>
       </div>
       <div className="xl:px-[175px] lg:px-[120px] mt-[150px]">
-        <div className="w-full bg-[#F8F8F8]   flex flex-col ">
+        <div className="w-full flex flex-col gap-y-[60px] ">
           {otherStories?.map((story, index) => (
             <div
               key={index}
-              className="w-full flex gap-x-[38px] py-[39px] pl-[36px] xl:pr-[60px] lg:pr-[50px] items-center"
+              className="w-full bg-[#F8F8F8] flex gap-x-[38px] py-[39px] pl-[36px] xl:pr-[60px] lg:pr-[50px] items-center"
             >
               <Image
                 src={story.image}
