@@ -54,9 +54,10 @@ const Header = () => {
               Sign In
             </Link>
           }
-          children={<SignIn />}
           className="xl:w-[902px] xl:px-[32px] xl:pt-[84px] xl:pb-[64px] lg:w-[600px]"
-        ></Modal>
+        >
+          {<SignIn />}
+        </Modal>
         <Modal
           showXIcon={true}
           triggerBtn={
@@ -68,9 +69,10 @@ const Header = () => {
               Create account
             </Button>
           }
-          children={<SignUp />}
           className="xl:w-[902px] xl:px-[32px] xl:pt-[84px] xl:pb-[64px] lg:w-[600px]"
-        ></Modal>
+        >
+          {<SignUp />}
+        </Modal>
 
         <SearchIcon strokeWidth={1} />
       </div>
