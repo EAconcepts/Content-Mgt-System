@@ -12,3 +12,14 @@ export interface TagsProps {
   tagName: string | undefined;
   color: string | undefined;
 }
+
+export interface ModalProps {
+  children: ReactNode;
+  showXIcon?: boolean;
+  customCloseIcon?: ReactNode;
+  customCloseClass?: string;
+  width?: number;
+  padding?: number;
+  className?: string
+  triggerBtn: string | ReactNode
+}
