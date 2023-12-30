@@ -86,7 +86,7 @@ const TopStories = () => {
           // disableNavIfEdgeActive
           visibleSlideProps={{
             style: {
-              marginRight: "10px",
+              // marginRight: "10px",
               gap: "15px",
             },
           }}

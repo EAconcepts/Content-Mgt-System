@@ -18,6 +18,11 @@ const config = {
       },
     },
     extend: {
+      fontFamily:{
+        inter: ["'Inter', sans-serif"],
+        cormorant: ["'Cormorant Garamond', serif"],
+        monteserrat: ["'Montserrat', sans-serif"]
+      },
       colors: {
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",
