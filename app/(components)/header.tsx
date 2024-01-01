@@ -35,11 +35,13 @@ const Header = () => {
   ];
   const [showMenu, setShowMenu] = useState<boolean>(false);
   const [mobileView, setMobileView] = useState<boolean>(false)
-  const [deviceWidth, setDeviceWidth ] = useState<number>(window.innerWidth)
+  const [deviceWidth, setDeviceWidth ] = useState<number>(0)
   useEffect(()=>{
-    console.log(deviceWidth)
+    let width = window?.innerWidth
+    setDeviceWidth(width)
+    console.log(width)
     if(deviceWidth < 640){
-      console.log(deviceWidth)
+      console.log(width)
       setMobileView(true)
     }
     else{
