@@ -11,6 +11,8 @@ export interface RecentPostsProps {
 export interface TagsProps {
   tagName: string | undefined;
   color: string | undefined;
+  className?: string
+  ballPoint?: string
 }
 
 export interface ModalProps {
