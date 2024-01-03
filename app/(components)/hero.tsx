@@ -1,7 +1,7 @@
 'use client'
 
 import Image from "next/image";
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import herobg from "./assets/bg-1.png";
 import avatar from './assets/avatar.png'
 import fb from './assets/fb.svg'
@@ -14,6 +14,8 @@ import img2 from './assets/img-2.png'
 import img3 from './assets/img-3.png'
 import img4 from './assets/img-4.png'
 import { RecentPostsProps } from "@/@types";
+import Aos from 'aos';
+import 'aos/dist/aos.css';
 
 const Hero = () => {
     const socials = [fb, twitter, linkedin, anchor]
@@ -39,10 +41,13 @@ const Hero = () => {
             tag: 'Lifestyle'
         },
     ])
+    useEffect(()=>{
+       Aos.init() 
+    },[])
   return (
-    <div className="w-full flex justify-center items-center lg:bg-[#F0F2F5] pt-[44px] lg:pt-[80.42px] lg:pb-[79.58px] md:pb-[55px] px-[32px] lg:px-[97px] ">
+    <div className="w-full z-0 flex justify-center items-center lg:bg-[#F0F2F5] pt-[44px] lg:pt-[80.42px] lg:pb-[79.58px] md:pb-[55px] px-[32px] lg:px-[97px] ">
       <div className="w-full flex flex-col lg:flex-row gap-x-[15px]">
-        <div className="relative flex justify-center ">
+        <div data-aos= 'fade-up' className="relative flex justify-center ">
           <Image
             src={herobg}
             width={705}
@@ -51,7 +56,7 @@ const Hero = () => {
             className="lg:w-[705px] w-full lg:h-[587.5px] h-[261px] rounded-[10px] object-cover "
           />
           {/* floating post */}
-          <div className="mx-[15px] lg:mx-0 absolute bottom-[-30px] lg:w-[575px] bg-white pt-[8.14px] lg:pt-[16.46px] pb-[14.84px] lg:pb-[30px] px-[15.83px] lg:px-[32px]">
+          <div className="w-[calc(100%-30px)] mx[15px] lg:mx-0 absolute bottom-[-30px] lg:w-[575px] bg-white pt-[8.14px] lg:pt-[16.46px] pb-[14.84px] lg:pb-[30px] px-[15.83px] lg:px-[32px]">
             <Tags color="#016766" tagName="Tech" ballPoint="w-[7.916px] h-[7.916px] shrink-0" className="py-[3.958px] px-[15.833px]"/>
             <h3 className="mt-[14.54px] text-primary text-[13.854px] lg:text-[28px] leading-[16.921px] lg:leading-[34.2px] font-[700]">
               Competitive Advantage in a Commoditized Industry
@@ -80,7 +85,7 @@ const Hero = () => {
           </div>
         </div>
         {/* Featured Posts */}
-        <div className="lg:w-[45%] mt-[107px] lg:mt-0 flex flex-col gap-y-[30px] px-[15px]">
+        <div data-aos='fade-up' className="lg:w-[45%] mt-[107px] lg:mt-0 flex flex-col gap-y-[30px] px-[15px]">
             {
                 featuredPosts?.map((post, index)=>(
                     <div key={index} className="flex gap-x-[20px]  pb-[32px] border-b-[2px] border-[#CED0D4] last:border-b-0">
