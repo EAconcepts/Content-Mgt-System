@@ -6,10 +6,11 @@ const token = ''
 const headers = {
     Authorization: `Bearer ${token}`
 }
+
+export const useFetch=({props}: any)=>{
 const [data, setData] = useState<any>(null)
 
-export const useFetch=({data}: any)=>{
-    axios.post(`${url}`, {data}, {headers})
+    axios.post(`${url}`, {props}, {headers})
     .then((response)=>{
         console.log(response)
        setData(response)
