@@ -1,10 +1,10 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
 import { Space_Grotesk } from "next/font/google";
 import "./globals.css";
 import Header from "./(components)/header";
 import Footer from "./(components)/footer";
-import Head from "next/head";
+import Providers from "./providers";
+import { Toaster } from "@/components/ui/sonner";
 
 // const inter = Inter({ subsets: ['latin'] })
 const grotesk = Space_Grotesk({ subsets: ["latin"], display: "swap" });
@@ -21,11 +21,14 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-        <link rel="icon" href="/favicon.svg" sizes="any" />
+      <link rel="icon" href="/favicon.svg" sizes="any" />
       <body className={grotesk.className}>
-        <Header />
-        {children}
-        <Footer />
+        <Providers>
+          <Header />
+          <Toaster/>
+          {children}
+          <Footer />
+        </Providers>
       </body>
     </html>
   );

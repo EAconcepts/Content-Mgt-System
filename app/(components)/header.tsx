@@ -5,8 +5,8 @@ import Link from "next/link";
 import React, { useEffect, useRef, useState } from "react";
 import { MenuIcon, SearchIcon } from "lucide-react";
 import { Modal } from "@/components/ui/modal";
-import { SignUp } from "./sign-up";
-import { SignIn } from "./sign-in";
+import { SignUp } from "./auths/sign-up";
+import { SignIn } from "./auths/sign-in";
 import logo from "./assets/logo.svg";
 import Image from "next/image";
 import Aos from "aos";
@@ -71,6 +71,13 @@ const Header = () => {
       document.removeEventListener("click", onOutsideClick);
     };
   }, []);
+  const loginRef:React.Ref<HTMLAnchorElement> | undefined = useRef(null)
+  const autoClick=()=>{
+    if(loginRef.current){
+      console.log('clicked')
+      loginRef.current.click()
+    }
+  }
   return (
     <nav className="w-full relative flex shrink-0 lg:justify-center justify-between items-center h-[80px] gap-x-[44px] py-[32px] px-[24px] bg-white border-b-[1px] border-[rgba(124,110,83,0.04)]">
       {/* Logo  */}
@@ -114,8 +121,9 @@ const Header = () => {
             showXIcon={true}
             triggerBtn={
               <Link
+              ref={loginRef}
                 onClick={() => setShowMenu(false)}
-                href={"/"}
+                href={"#"}
                 className="hover:text-secondary"
               >
                 Sign In
@@ -125,7 +133,7 @@ const Header = () => {
           >
             {<SignIn />}
           </Modal>
-          <Modal
+          <Modal 
             showXIcon={true}
             triggerBtn={
               <Button
@@ -137,9 +145,9 @@ const Header = () => {
                 Create account
               </Button>
             }
-            className="xl:w-[902px] xl:px-[32px] xl:pt-[84px] xl:pb-[64px] lg:w-[600px]"
+            className="w-full box-border xl:w-[902px] xl:px-[32px] xl:pt-[84px] xl:pb-[64px] lg:w-[600px]"
           >
-            {<SignUp />}
+            {<SignUp autoClick={autoClick}/>}
           </Modal>
 
           <SearchIcon strokeWidth={1} />
