@@ -172,7 +172,7 @@ export const SignUp = ({ autoClick }: any) => {
         <Modal
           showXIcon={true}
           triggerBtn={
-            <Button type="button" variant={"outline"} className="w-full">
+            <Button onClick={showLoginModal} type="button" variant={"outline"} className="w-full">
               Already have an account
             </Button>
           }
