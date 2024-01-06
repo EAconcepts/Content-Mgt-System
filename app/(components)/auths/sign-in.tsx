@@ -1,11 +1,12 @@
 import { UserProps } from "@/@types";
 import { setCookie } from "@/app/(helpers)/helpers";
 import { Button } from "@/components/ui/button";
+import { DialogClose } from "@/components/ui/dialog";
 import { Input } from "@/components/ui/input";
 import axios from "axios";
 import { Eye, EyeOff } from "lucide-react";
 import { useRouter } from "next/navigation";
-import { FormEventHandler, useState } from "react";
+import { FormEventHandler, useRef, useState } from "react";
 import { toast } from "sonner";
 
 export const SignIn = () => {
@@ -19,6 +20,13 @@ export const SignIn = () => {
   const url = process.env.NEXT_PUBLIC_API_URL;
 
   const router = useRouter()
+  const loginRef = useRef<HTMLButtonElement | null>(null);
+  const closeModal = () => {
+    if (loginRef.current) {
+      loginRef.current.click();
+    }
+  };
+ 
   const onInputChange=(e: React.ChangeEvent<HTMLInputElement>)=>{
     const {name, value} = e.target
     setLogin((prev)=>({...prev, [name]:value}))
@@ -38,6 +46,7 @@ export const SignIn = () => {
         toast('Success', {
           description: `{${response?.data?.message ||'Login successfu!'}`
         })
+        closeModal()
         setTimeout(() => {
           router.push('/blog');
         }, 2000);
@@ -118,6 +127,9 @@ export const SignIn = () => {
           Forgot Password
         </button>
       </div>
+      <DialogClose className="hidden">
+        <button type="button" ref={loginRef} className="w-0 h-0 mt-0 hidden"></button>
+      </DialogClose>
     </form>
   );
 };
