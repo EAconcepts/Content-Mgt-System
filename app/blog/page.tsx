@@ -15,6 +15,7 @@ import blogImg2 from "../(components)/assets/blog-img-2.jpg.png";
 import blogImg3 from "../(components)/assets/blog-img-3.jpg.png";
 import blogImg4 from "../(components)/assets/blog-img4.png";
 import { Button } from "@/components/ui/button";
+import withAuth from "../(helpers)/withAuth";
 
 const ReadBlogPost = () => {
   const socials = [fb, twitter, linkedin, anchor];
@@ -196,4 +197,4 @@ vitae sapien ut libero?
   );
 };
 
-export default ReadBlogPost;
+export default  withAuth(ReadBlogPost) 

@@ -24,4 +24,17 @@ export interface ModalProps {
   padding?: number;
   className?: string
   triggerBtn: string | ReactNode
+  signupRef?: MutableRefObject<HTMLButtonElement | null>
+}
+
+export interface UserProps{
+  username?: string;
+  email?: string;
+  password?: string;
+}
+export interface UsersProps{
+  id?: string;
+  email?: string;
+  userRole?: string;
+  username?: string;
 }
