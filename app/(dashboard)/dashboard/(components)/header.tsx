@@ -45,8 +45,8 @@ const Header = () => {
     },
   ]
   const [activeLink, setActiveLink] = useState<string>('Dashboard')
-  const menuRef:  React.MutableRefObject<null> = useRef(null)
-  const onOutsideClick = (event: MouseEvent) => {
+  const menuRef:  any = useRef(null)
+  const onOutsideClick = (event: any) => {
     if (menuRef.current && !menuRef.current.contains(event?.target as Node)) {
       setOpenNav(false);
     }
