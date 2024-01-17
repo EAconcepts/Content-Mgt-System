@@ -21,7 +21,9 @@ const config = {
       fontFamily:{
         inter: ["'Inter', sans-serif"],
         cormorant: ["'Cormorant Garamond', serif"],
-        monteserrat: ["'Montserrat', sans-serif"]
+        monteserrat: ["'Montserrat', sans-serif"],
+        roboto: [' "Roboto", sans-serif'],
+        manrope: ['  "Manrope", sans-serif']
       },
       colors: {
         border: "hsl(var(--border))",

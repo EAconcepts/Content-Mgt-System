@@ -24,10 +24,10 @@ export default function RootLayout({
       <link rel="icon" href="/favicon.svg" sizes="any" />
       <body className={grotesk.className}>
         <Providers>
-          <Header />
+          {/* <Header /> */}
           <Toaster/>
           {children}
-          <Footer />
+          {/* <Footer /> */}
         </Providers>
       </body>
     </html>
