@@ -14,125 +14,205 @@ const Dashboard = () => {
       name: "Ernest Gray",
       avatar: avatar,
       status: "Upgrade",
+      email: "elvin27@gmail.com",
+      postCount: 4,
+      mostViewed: "5 Tips to make money",
+      date: "1/11/2050",
     },
     {
       name: "Ernest Gray",
       avatar: avatar,
       status: "Upgrade",
+      email: "elvin27@gmail.com",
+      postCount: 2,
+      mostViewed: "5 Tips to make money",
+      date: "1/11/2050",
     },
     {
       name: "Ernest Gray",
       avatar: avatar,
       status: "Upgrade",
+      email: "elvin27@gmail.com",
+      postCount: 4,
+      mostViewed: "5 Tips to make money",
+      date: "1/11/2050",
     },
     {
       name: "Ernest Gray",
       avatar: avatar,
       status: "Upgrade",
+      email: "elvin27@gmail.com",
+      postCount: 1,
+      mostViewed: "5 Tips to make money",
+      date: "1/11/2050",
     },
     {
       name: "Ernest Gray",
       avatar: avatar,
       status: "Upgrade",
+      email: "elvin27@gmail.com",
+      postCount: 3,
+      mostViewed: "5 Tips to make money",
+      date: "1/11/2050",
     },
     {
       name: "Ernest Gray",
       avatar: avatar,
       status: "Upgrade",
+      email: "elvin27@gmail.com",
+      postCount: 2,
+      mostViewed: "5 Tips to make money",
+      date: "1/11/2050",
     },
     {
       name: "Ernest Gray",
       avatar: avatar,
       status: "Upgrade",
+      email: "elvin27@gmail.com",
+      postCount: 4,
+      mostViewed: "5 Tips to make money",
+      date: "1/11/2050",
     },
     {
       name: "Ernest Gray",
       avatar: avatar,
       status: "Upgrade",
+      email: "elvin27@gmail.com",
+      postCount: 3,
+      mostViewed: "5 Tips to make money",
+      date: "1/11/2050",
     },
     {
       name: "Ernest Gray",
       avatar: avatar,
       status: "Upgrade",
+      email: "elvin27@gmail.com",
+      postCount: 4,
+      mostViewed: "5 Tips to make money",
+      date: "1/11/2050",
+    },
+    {
+      name: "Ernest Gray",
+      avatar: avatar,
+      status: "Upgrade",
+      email: "elvin27@gmail.com",
+      postCount: 2,
+      mostViewed: "5 Tips to make money",
+      date: "1/11/2050",
+    },
+    {
+      name: "Ernest Gray",
+      avatar: avatar,
+      status: "Upgrade",
+      email: "elvin27@gmail.com",
+      postCount: 1,
+      mostViewed: "5 Tips to make money",
+      date: "1/11/2050",
+    },
+    {
+      name: "Ernest Gray",
+      avatar: avatar,
+      status: "Upgrade",
+      email: "elvin27@gmail.com",
+      postCount: 4,
+      mostViewed: "5 Tips to make money",
+      date: "1/11/2050",
     },
   ]);
   return (
-    <main className="w-full flex flex-col py-[16px] px-[32px]">
-      <div className="w-full flex flex-col gap-y-[8px]">
-        <p className="font-[600] text-[#4C4C4C]">In the last 30 days</p>
-        {/* Boxes */}
-        <div className="w-full h-[93px] flex gap-x-[16px]">
-          {/* Box */}
-          <div className="relative w-[93px] h-full">
-            <div
-              className="absolute
+    <main className="w-full bg-white lg:bg-[#E5E5E5] flex flex-col py-[16px] lg:py-[42px] px-[32px]">
+      <h3 className="hidden lg:block font-manrope text-[32px] font-[400] leading-[16px] text-[#143DC]">
+        Welcome Nesto,
+      </h3>
+      <div className="w-full flex flex-col gap-y-[8px] lg:mt-[42px] ">
+        <div className="flex flex-col gap-y-[8px] lg:gap-y-[24px] lg:bg-white lg:py-[24px] lg:px-[17.5px]">
+          <p className="font-[600] lg:text-[18px] lg:font-[600] lg:leading-[32px] text-[#4C4C4C]">
+            In the last 30 days
+          </p>
+          {/* Boxes */}
+          <div className="w-full h-[93px] lg:h-[80px] flex gap-x-[16px]">
+            {/* Box */}
+            <div className="relative lg:flex flex-col justify-center w-[93px] lg:w-full h-full">
+              <div
+                className="absolute 
                          bottom-0 z-10 flex flex-col gap-y-[8px] px-[8px] py-[8px]"
-            >
-              <h3 className="text-white text-[24px] font-[600] leading-[24px]">
-                30k
-              </h3>
-              <p className="text-[12px] font-[400] leading-[16px] text-white">
-                Posts
-              </p>
+              >
+                <h3 className="text-white text-[24px] font-[600] leading-[24px]">
+                  30k
+                </h3>
+                <p className="text-[12px] font-[400] leading-[16px] text-white">
+                  Posts
+                </p>
+              </div>
+              <div className="w-0 lg:w-full lg:h-ful h-0 border-l-transparent  border-l-[93px] border-t-[93px] border-t-[#143D3C] rounded-[8px]"></div>
+              <div className="absolute -z-1 bottom-[1px] lg:-bottom-[7px] left-[1px] w-0 lg:w-[40%] h-0 lg:h-ful lg: border-r-transparent  border-r-[93px] border-b-[93px] border-b-[#364B1B] rounded-[8px]"></div>
             </div>
-            <div className="w-0 h-0 border-l-transparent  border-l-[93px] border-t-[93px] border-t-[#143D3C] rounded-[8px]"></div>
-            <div className="absolute -z-1 bottom-[1px] left-[1px] w-0 h-0 border-r-transparent  border-r-[93px] border-b-[93px] border-b-[#364B1B] rounded-[8px]"></div>
-          </div>
-          <div className="relative w-[93px] h-full">
-            <div
-              className="absolute
+            {/* Box */}
+            <div className="relative lg:flex flex-col justify-center w-[93px] lg:w-full h-full">
+              <div
+                className="absolute
                          bottom-0 z-10 flex flex-col gap-y-[8px] px-[8px] py-[8px]"
-            >
-              <h3 className="text-white text-[24px] font-[600] leading-[24px]">
-                100k
-              </h3>
-              <p className="text-[12px] font-[400] leading-[16px] text-white">
-                Authors
-              </p>
+              >
+                <h3 className="text-white text-[24px] font-[600] leading-[24px]">
+                  100k
+                </h3>
+                <p className="text-[12px] font-[400] leading-[16px] text-white">
+                  Authors
+                </p>
+              </div>
+              <div className="w-0 lg:w-full lg:h-ful h-0 border-l-transparent  border-l-[93px] border-t-[93px] border-t-[#143D3C] rounded-[8px]"></div>
+              <div className="absolute -z-1 bottom-[1px] lg:-bottom-[7px] left-[1px] w-0 lg:w-[40%] h-0 lg:h-ful lg: border-r-transparent  border-r-[93px] border-b-[93px] border-b-[#364B1B] rounded-[8px]"></div>
             </div>
-            <div className="w-0 h-0 border-l-transparent  border-l-[93px] border-t-[93px] border-t-[#143D3C] rounded-[8px]"></div>
-            <div className="absolute -z-1 bottom-[1px] left-[1px] w-0 h-0 border-r-transparent  border-r-[93px] border-b-[93px] border-b-[#364B1B] rounded-[8px]"></div>
-          </div>
-          <div className="relative w-[93px] h-full">
-            <div
-              className="absolute
+            {/* Box */}
+            <div className="relative lg:flex flex-col justify-center w-[93px] lg:w-full h-full">
+              <div
+                className="absolute
                          bottom-0 z-10 flex flex-col gap-y-[8px] px-[8px] py-[8px]"
-            >
-              <h3 className="text-white text-[24px] font-[600] leading-[24px]">
-                2k
-              </h3>
-              <p className="text-[12px] font-[400] leading-[16px] text-white">
-                Comments
-              </p>
+              >
+                <h3 className="text-white text-[24px] font-[600] leading-[24px]">
+                  2k
+                </h3>
+                <p className="text-[12px] font-[400] leading-[16px] text-white">
+                  Comments
+                </p>
+              </div>
+              <div className="w-0 lg:w-full lg:h-ful h-0 border-l-transparent  border-l-[93px] border-t-[93px] border-t-[#143D3C] rounded-[8px]"></div>
+              <div className="absolute -z-1 bottom-[1px] lg:-bottom-[7px] left-[1px] w-0 lg:w-[40%] h-0 lg:h-ful lg: border-r-transparent  border-r-[93px] border-b-[93px] border-b-[#364B1B] rounded-[8px]"></div>
             </div>
-            <div className="w-0 h-0 border-l-transparent  border-l-[93px] border-t-[93px] border-t-[#143D3C] rounded-[8px]"></div>
-            <div className="absolute -z-1 bottom-[1px] left-[1px] w-0 h-0 border-r-transparent  border-r-[93px] border-b-[93px] border-b-[#364B1B] rounded-[8px]"></div>
           </div>
         </div>
         {/* Authors / search & Filter */}
-        <div className="mt-[16px] py-[16px] w-full flex justify-center">
+        <div className="lg:bg-white lg:p-[19px] mt-[16px] py-[16px] w-full flex justify-center">
           <div className="w-full flex justify-between">
             <div className="flex flex-col gap-y-[8px]">
-              <p className="text-[#4C4C4C] text-[12px] font-[600] leading-[9.672px]">
+              <p className="text-[#4C4C4C] text-[12px] lg:text-[18px] font-[600] leading-[9.672px] lg:leading-[32px]">
                 All authors
               </p>
-              <p className=" text-[#B3B3B3] text-[8px] font-[400] leading-[4.836px]">
+              <p className="text-[#B3B3B3] text-[8px] lg:text-[12px] font-[400] leading-[4.836px] lg:leading-[16px]">
                 Tracks authors activities and make super admin
               </p>
             </div>
             {/* Search & Filter */}
             <div className="flex gap-x-[6.57px]">
-              <div className="bg-[#FAFAFA] border-[0.411px] rounded-[1.643px] border-[#E6E6E6] h-[32px] w-[32px] flex justify-center items-center">
+              <div className="bg-[#FAFAFA] border-[0.411px] rounded-[1.643px] border-[#E6E6E6] h-[32px] w-[32px] lg:w-fit flex justify-center lg:justify-start items-center lg:gap-x-[16px] lg:pl-[16px] lg:py-[8px]">
                 <CiSearch size={16} />
+                <input
+                  type="text"
+                  placeholder="Search authors"
+                  className="hidden lg:block text-[12px] font-[400] leading-[16px] text-[#B3B3B3] bg-transparent focus-visible:outline-none"
+                />
               </div>
-              <div className=" border-[0.411px] rounded-[1.643px] border-[#E6E6E6] h-[32px] w-[32px] flex justify-center items-center">
+              <div className=" border-[0.411px] rounded-[1.643px] border-[#E6E6E6] h-[32px] w-[32px] lg:w-fit flex justify-center items-center lg:px-[4.5px] lg:py-[8px] lg:gap-x-[6px]">
                 <TbFilterSearch />
+                <span className="hidden lg:block text-[#4C4C4C] font-[400] text-[12px] leading-[16px]">
+                  Filter
+                </span>
               </div>
             </div>
           </div>
         </div>
-        Author Lists
-        <div className="w-full mt-[16px] flex flex-col font-roboto">
+        {/* Author Lists */}
+        <div className="lg:hidden w-full lg:bg-white lg:p-[14px] mt-[16px] flex flex-col font-roboto">
           <div className="grid grid-cols-2 text-[16px] font-[500] leading-[24px] text-black  ">
             <h4>Name</h4>
             <div className="flex gap-x-[32px] justify-end">
@@ -167,11 +247,61 @@ const Dashboard = () => {
             ))}
           </div>
         </div>
+        <div className="hidden lg:block w-full p-[14px] bg-white">
+          <table className="w-full font-roboto">
+            <tbody>
+            <tr className="border-b">
+              <th className="text-start pb-[16px]">Name</th>
+              <th className="text-start">Email</th>
+              <th className="text-start">Post Count</th>
+              <th className="text-start">Most Viewed</th>
+              <th className="text-start">Date</th>
+              <th> </th>
+            </tr>
+            {authors?.map((author, index)=>(
+            <tr key={index} className="border-b ">
+              <td className="py-[16px]">
+              <div className="flex gap-x-[8px] items-center">
+                  <Image
+                    src={author.avatar}
+                    width={32}
+                    height={32}
+                    alt="avatar"
+                  />
+                  <h3 className="w-[77px]  text-nowrap overflow-x-hidden overflow-ellipsis text-[14px] lg:text-[16px] lg:leading-[24px] font-[500] leading-[21px] text-black">
+                    {author.name}
+                  </h3>
+                </div>
+              </td>
+              <td>{author.email}</td>
+              <td>
+              <div className="flex">
+                {Array.from({length:author.postCount}).map((_ ,index)=>(
+              <Image
+                  key={index}
+                    src={author.avatar}
+                    width={32}
+                    height={32}
+                    alt="avatar"
+                    className="first:ml-0 -ml-3"
+                  />
+                  ))}
+                  </div>
+              </td>
+              <td className="w-[77px]  text-nowrap overflow-x-hidden overflow-ellipsis text-[16px] font-[400] leading-[24px] text-black">{author.mostViewed}</td>
+              <td>{author.date}</td>
+              <td className="lg:text-[16px] font-[600] lg:leading-[24px] text-[#143D3C]">{author.status}</td>
+            </tr>
+            ))}
+            </tbody>
+          </table>
+        </div>
+        {/* Pagination */}
         <div className="font-roboto w-full flex justify-end mt-[24px]">
-            <Button className="flex gap-x-[12px] items-center text-[16px] font-[400] leading-[24px] bg-[#143D3C] text-[#FEFDFD] px-[20px] py-[8px] rounded-none">
-                <span>Next</span>
-                <FaGreaterThan color="white" size={12}/>
-            </Button>
+          <Button className="flex gap-x-[12px] items-center text-[16px] font-[400] leading-[24px] bg-[#143D3C] text-[#FEFDFD] px-[20px] py-[8px] rounded-none">
+            <span>Next</span>
+            <FaGreaterThan color="white" size={12} />
+          </Button>
         </div>
       </div>
     </main>
