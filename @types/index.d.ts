@@ -38,3 +38,7 @@ export interface UsersProps{
   userRole?: string;
   username?: string;
 }
+export interface NavMenuProps{
+  activeLink: string;
+  setActiveLink: React.Dispatch<React.SetStateAction<string>>;
+}
