@@ -5,7 +5,7 @@ import { CiSearch } from "react-icons/ci";
 import { TbFilterSearch } from "react-icons/tb";
 import avatar from "../../(components)/assets/avatar.svg";
 import Image from "next/image";
-import { FaEllipsisV, FaGreaterThan } from "react-icons/fa";
+import { FaEllipsisV, FaGreaterThan, FaLessThan } from "react-icons/fa";
 import { Button } from "@/components/ui/button";
 
 const Dashboard = () => {
@@ -124,7 +124,7 @@ const Dashboard = () => {
       <h3 className="hidden lg:block font-manrope text-[32px] font-[400] leading-[16px] text-[#143DC]">
         Welcome Nesto,
       </h3>
-      <div className="w-full flex flex-col gap-y-[8px] lg:mt-[42px] ">
+      <div className="w-full flex flex-col gap-y-[8px] lg:gap-y-[32px] lg:mt-[42px] ">
         <div className="flex flex-col gap-y-[8px] lg:gap-y-[24px] lg:bg-white lg:py-[24px] lg:px-[17.5px]">
           <p className="font-[600] lg:text-[18px] lg:font-[600] lg:leading-[32px] text-[#4C4C4C]">
             In the last 30 days
@@ -182,7 +182,7 @@ const Dashboard = () => {
           </div>
         </div>
         {/* Authors / search & Filter */}
-        <div className="lg:bg-white lg:p-[19px] mt-[16px] py-[16px] w-full flex justify-center">
+        <div className="lg:bg-white lg:p-[19px] mt-[16px] lg:mt-0 py-[16px] w-full flex justify-center">
           <div className="w-full flex justify-between">
             <div className="flex flex-col gap-y-[8px]">
               <p className="text-[#4C4C4C] text-[12px] lg:text-[18px] font-[600] leading-[9.672px] lg:leading-[32px]">
@@ -247,61 +247,73 @@ const Dashboard = () => {
             ))}
           </div>
         </div>
-        <div className="hidden lg:block w-full p-[14px] bg-white">
-          <table className="w-full font-roboto">
+        {/* Desktop table list */}
+        <div className="w-full lg:p-[14px] bg-white">
+          <table className="hidden lg:inline-table w-full font-roboto">
             <tbody>
-            <tr className="border-b">
-              <th className="text-start pb-[16px]">Name</th>
-              <th className="text-start">Email</th>
-              <th className="text-start">Post Count</th>
-              <th className="text-start">Most Viewed</th>
-              <th className="text-start">Date</th>
-              <th> </th>
-            </tr>
-            {authors?.map((author, index)=>(
-            <tr key={index} className="border-b ">
-              <td className="py-[16px]">
-              <div className="flex gap-x-[8px] items-center">
-                  <Image
-                    src={author.avatar}
-                    width={32}
-                    height={32}
-                    alt="avatar"
-                  />
-                  <h3 className="w-[77px]  text-nowrap overflow-x-hidden overflow-ellipsis text-[14px] lg:text-[16px] lg:leading-[24px] font-[500] leading-[21px] text-black">
-                    {author.name}
-                  </h3>
-                </div>
-              </td>
-              <td>{author.email}</td>
-              <td>
-              <div className="flex">
-                {Array.from({length:author.postCount}).map((_ ,index)=>(
-              <Image
-                  key={index}
-                    src={author.avatar}
-                    width={32}
-                    height={32}
-                    alt="avatar"
-                    className="first:ml-0 -ml-3"
-                  />
-                  ))}
-                  </div>
-              </td>
-              <td className="w-[77px]  text-nowrap overflow-x-hidden overflow-ellipsis text-[16px] font-[400] leading-[24px] text-black">{author.mostViewed}</td>
-              <td>{author.date}</td>
-              <td className="lg:text-[16px] font-[600] lg:leading-[24px] text-[#143D3C]">{author.status}</td>
-            </tr>
-            ))}
+              <tr className="border-b">
+                <th className="text-start pb-[16px]">Name</th>
+                <th className="text-start">Email</th>
+                <th className="text-start">Post Count</th>
+                <th className="text-start">Most Viewed</th>
+                <th className="text-start">Date</th>
+                <th> </th>
+              </tr>
+              {authors?.map((author, index) => (
+                <tr key={index} className="border-b ">
+                  <td className="py-[16px]">
+                    <div className="flex gap-x-[8px] items-center">
+                      <Image
+                        src={author.avatar}
+                        width={32}
+                        height={32}
+                        alt="avatar"
+                      />
+                      <h3 className="w-[77px]  text-nowrap overflow-x-hidden overflow-ellipsis text-[14px] lg:text-[16px] lg:leading-[24px] font-[500] leading-[21px] text-black">
+                        {author.name}
+                      </h3>
+                    </div>
+                  </td>
+                  <td>{author.email}</td>
+                  <td>
+                    <div className="flex">
+                      {Array.from({ length: author.postCount }).map(
+                        (_, index) => (
+                          <Image
+                            key={index}
+                            src={author.avatar}
+                            width={32}
+                            height={32}
+                            alt="avatar"
+                            className="first:ml-0 -ml-3"
+                          />
+                        )
+                      )}
+                    </div>
+                  </td>
+                  <td className="w-[77px] lg:w-auto text-nowrap overflow-x-hidden overflow-ellipsis text-[16px] font-[400] leading-[24px] text-black">
+                    {author.mostViewed}
+                  </td>
+                  <td>{author.date}</td>
+                  <td className="lg:text-[16px] font-[600] lg:leading-[24px] text-[#143D3C]">
+                    <button>{author.status}</button>
+                  </td>
+                </tr>
+              ))}
             </tbody>
           </table>
-        </div>
-        {/* Pagination */}
-        <div className="font-roboto w-full flex justify-end mt-[24px]">
-          <Button className="flex gap-x-[12px] items-center text-[16px] font-[400] leading-[24px] bg-[#143D3C] text-[#FEFDFD] px-[20px] py-[8px] rounded-none">
-            <span>Next</span>
-            <FaGreaterThan color="white" size={12} />
-          </Button>
+          {/* Pagination */}
+          <div className="font-roboto w-full flex justify-between mt-[24px]">
+            <Button className="flex gap-x-[12px] items-center text-[16px] font-[400] leading-[24px] bg-[#143D3C] text-[#FEFDFD] px-[20px] py-[8px] rounded-none">
+              <span>Prev</span>
+              <FaLessThan color="white" size={12} />
+            </Button>
+            <div className="flex "></div>
+            <Button className="flex gap-x-[12px] items-center text-[16px] font-[400] leading-[24px] bg-[#143D3C] text-[#FEFDFD] px-[20px] py-[8px] rounded-none">
+              <span>Next</span>
+              <FaGreaterThan color="white" size={12} />
+            </Button>
+          </div>
         </div>
       </div>
     </main>
